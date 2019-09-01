@@ -1,0 +1,10 @@
+struct ContentView: View {
+    let stringArray: [Color] = ["a","b","c","d","e"]
+
+    var body: some View {
+        VStack {
+            ForEach(stringArray, id: \.self) {Text($0)}
+            ForEach(stringArray, id: \.self) { (alphabet) in Text(alphabet)}
+        }
+    }
+}

@@ -18,7 +18,17 @@ struct CircleImage_Previews: PreviewProvider {
 
 
 /*
+//type 1
 //working code with frame diffrent frame size
+                Image("burger")
+                    .resizable()
+                    .frame(width:50,height: 50)
+                    .clipShape(Circle())
+*/
+
+
+/*
+//type 2
                 Image("burger")
                     .resizable()
                     .frame(width:50,height: 50)

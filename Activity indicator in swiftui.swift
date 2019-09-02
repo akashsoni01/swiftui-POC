@@ -24,10 +24,14 @@ struct ActivityIndicator: UIViewRepresentable {
 
 
 struct ContentView: View {
+    @State private var isShowing = true
     var body: some View {
         VStack{
             Text("Loding...")
-            ActivityIndicator(isAnimating: .constant(true), style: UIActivityIndicatorView.Style.large)
+            Toggle(isOn: $isShowing) {
+                return Text("Animate Indicator")
+            }
+            ActivityIndicator(isAnimating: $isShowing, style: UIActivityIndicatorView.Style.large)
         }
         
     }

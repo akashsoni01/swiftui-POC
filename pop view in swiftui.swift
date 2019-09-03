@@ -12,7 +12,7 @@ struct ContentView: View {
     @State var pop = false
     var body: some View {
         VStack{
-            Text("pop").sheet(isPresented: $pop) {
+            Text("present").sheet(isPresented: $pop) {
                 GroupView()
             }.onTapGesture {
                 self.pop = true
